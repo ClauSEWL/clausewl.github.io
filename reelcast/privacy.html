@@ -27,39 +27,49 @@
   <header>
     <span class="pill">Reelcast</span>
     <h1>Privacy Policy</h1>
-    <p class="muted">Last updated: June 2026</p>
+    <p class="muted">Last updated: October 2026</p>
   </header>
 
   <p>Reelcast is built to be private by design. We have no user accounts, we run no
-  analytics or tracking SDKs, and we do not collect or sell your personal data.
+  analytics, advertising or tracking SDKs, and we do not collect or sell your personal data.
   This policy explains the little data the app does use, and why.</p>
 
   <h2>Location</h2>
-  <p>If you grant location access, Reelcast uses your location to compute the
-  solunar feeding windows for your spot and to request the local weather and
-  barometric-pressure forecast. Your location is used on your device for these
-  calculations. It is not stored on our servers (we have none) and is never sold
-  or shared for advertising. The core solunar forecast also works offline.</p>
+  <p>If you grant location access, Reelcast uses your location on your device to compute the
+  solunar feeding windows for your spot. To show weather, pressure and (for coastal spots)
+  tides, the app sends the coordinates of the spot you are viewing to the weather providers
+  below. Your location is not stored on our servers (we have none) and is never sold or shared
+  for advertising. The core solunar forecast also works offline.</p>
 
-  <h2>Weather data</h2>
-  <p>Weather and pressure forecasts are provided by Apple Weather (WeatherKit). To
-  return a forecast, the app sends the relevant coordinates to Apple. Apple's
-  handling of that request is governed by
-  <a href="https://www.apple.com/legal/privacy/">Apple's Privacy Policy</a>.</p>
+  <h2>Weather, pressure and tide data</h2>
+  <p>Weather and pressure forecasts come from Apple Weather (WeatherKit) and, when it is
+  unavailable, from <a href="https://open-meteo.com/">Open-Meteo.com</a>. Tides, sea
+  temperature and waves come from the Open-Meteo Marine API. To return a forecast, the app
+  sends the spot's coordinates (rounded to the forecast grid) to these services; no name,
+  account or device identifier is sent. Apple's handling is governed by
+  <a href="https://www.apple.com/legal/privacy/">Apple's Privacy Policy</a>; Open-Meteo's by
+  <a href="https://open-meteo.com/en/terms">its terms and privacy policy</a>. Tides are
+  modelled forecasts and are not for navigation.</p>
 
-  <h2>Saved spots &amp; catch log</h2>
-  <p>Spots you save and the catches you log (including any photos and the captured
-  conditions) are stored only on your device. They are not uploaded anywhere.</p>
+  <h2>Search and maps</h2>
+  <p>When you search for a place or drop a pin on the map, the search text or coordinates are
+  sent to Apple Maps to find the place and its name, under Apple's Privacy Policy.</p>
+
+  <h2>Saved spots, catch log and photos</h2>
+  <p>Spots you save and the catches you log (including any photos and the captured conditions)
+  are stored only on your device. They are not uploaded anywhere. Share cards are created on your
+  device and leave it only if you choose to share them.</p>
 
   <h2>Purchases</h2>
-  <p>Reelcast Pro is available as an auto-renewable subscription (weekly or
-  yearly) or as a one-time lifetime purchase, all handled entirely by Apple via
-  the App Store. We never see your payment details. Apple may share aggregate,
-  non-identifying purchase information with us through App Store Connect.</p>
+  <p>Reelcast Pro is available as an auto-renewable subscription (weekly or yearly) or as a
+  one-time lifetime purchase, all handled entirely by Apple via the App Store. We never see your
+  payment details. Apple may share aggregate, non-identifying purchase information with us
+  through App Store Connect.</p>
 
-  <h2>Notifications</h2>
-  <p>If you enable bite-window alerts, reminders are scheduled and delivered
-  locally on your device. No notification data leaves your device.</p>
+  <h2>Notifications, widgets and Siri</h2>
+  <p>Bite-window alerts and the optional free-trial reminder are scheduled and delivered locally
+  on your device. Widgets and Siri / Shortcuts answers are computed on your device from the spot
+  you last viewed. No notification, widget or Siri data leaves your device.</p>
 
   <h2>Children</h2>
   <p>Reelcast is not directed at children and does not knowingly collect data from them.</p>
@@ -67,13 +77,11 @@
   <h2>Changes</h2>
   <p>If this policy changes, the updated version will be posted on this page.</p>
 
-  <hr>
   <h2>Contact</h2>
-  <p>Questions about privacy? Email
-  <a href="mailto:clausewl@icloud.com">clausewl@icloud.com</a>.
-  </p>
+  <p>Questions about privacy? Email <a href="mailto:clausewl@icloud.com">clausewl@icloud.com</a>.</p>
 
-  <p class="muted"><a href="./">← Back to Reelcast</a></p>
+  <hr>
+  <p><a href="./">&larr; Back to Reelcast</a></p>
 </div>
 </body>
 </html>
