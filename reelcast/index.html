@@ -3,53 +3,75 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Reelcast — Solunar Fishing Forecast &amp; Trip Planner</title>
+<title>Reelcast: Fishing Forecast — Bite Times, Tides &amp; Solunar</title>
+<meta name="description" content="Reelcast finds the best times to fish anywhere: a 0–100 bite rating, an hourly bite curve, tides and water temperature, a fishing calendar and a catch log. No account, nothing tracked.">
+<meta name="apple-itunes-app" content="app-id=6779351034">
+<link rel="icon" href="./img/icon.png">
 <style>
-  :root { color-scheme: dark; }
+  :root { color-scheme: dark; --ink:#eef6f8; --ink2:#a4c4cd; --ink3:#6f95a1; --gold:#f5b557; --teal:#3caad0; }
+  * { box-sizing: border-box; }
   body {
-    margin: 0; padding: 0 1.25rem 4rem;
-    background: radial-gradient(120% 80% at 50% 0%, #103040 0%, #0a2230 40%, #02070c 100%);
-    color: #eef6f8; font: 17px/1.6 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    margin: 0; padding: 0 16px 4rem;
+    background: radial-gradient(120% 70% at 50% 0%, #133848 0%, #0a2230 42%, #02070c 100%) #02070c;
+    color: var(--ink); font: 17px/1.6 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
     min-height: 100vh; text-align: center;
   }
-  .wrap { max-width: 640px; margin: 0 auto; }
-  header { padding: 5rem 0 1rem; }
-  h1 { font-size: 3rem; margin: .5rem 0; letter-spacing: -0.02em; }
-  .tag { color: #7fcfe6; font-size: 1.25rem; }
-  .lead { color: #bcd6de; margin: 1.5rem auto; max-width: 31rem; }
-  .verdict { display:inline-block; margin-top:1rem; padding:.6rem 1.4rem; border-radius:99px;
-             background: rgba(84,209,158,.18); color:#54d19e; font-weight:700; letter-spacing:.08em; }
-  .features { text-align:left; max-width: 31rem; margin: 3rem auto; display:grid; gap:1rem; }
-  .feature { background: rgba(255,255,255,.05); border-radius: 16px; padding: 1rem 1.2rem; }
-  .feature b { color:#fff; }
-  .feature span { color:#8fb0bb; display:block; font-size:.95rem; }
-  .note { color:#6f95a1; font-size:.9rem; max-width: 31rem; margin: 0 auto; }
-  footer { margin-top: 3rem; color:#8fb0bb; font-size:.9rem; }
-  a { color: #3caad0; }
-  .fish { font-size: 3rem; }
+  .wrap { max-width: 980px; margin: 0 auto; }
+  header { padding: 4.5rem 0 1rem; }
+  .icon { width: 112px; height: 112px; border-radius: 25px; box-shadow: 0 18px 50px rgba(0,0,0,.45); }
+  h1 { font-size: clamp(2.2rem, 6vw, 3.4rem); line-height: 1.1; margin: 1.2rem 0 .4rem; letter-spacing: -0.02em; }
+  h1 em { font-style: normal; color: var(--gold); }
+  .tag { color: var(--ink2); font-size: 1.2rem; margin: 0 auto; max-width: 34rem; }
+  .cta { display: inline-block; margin-top: 1.8rem; padding: .8rem 1.6rem; border-radius: 99px;
+         background: var(--ink); color: #02070c; font-weight: 700; text-decoration: none; }
+  .shots { display: flex; gap: 14px; overflow-x: auto; padding: 2.5rem 4px 1rem; scroll-snap-type: x mandatory; }
+  .shots img { width: 220px; flex: 0 0 auto; border-radius: 22px; scroll-snap-align: center;
+               box-shadow: 0 14px 40px rgba(0,0,0,.4); }
+  .features { text-align: left; max-width: 40rem; margin: 2.5rem auto; display: grid; gap: .9rem;
+              grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); }
+  .feature { background: rgba(255,255,255,.05); border: 1px solid rgba(255,255,255,.06); border-radius: 16px; padding: 1rem 1.2rem; }
+  .feature b { color: #fff; display: block; }
+  .feature span { color: var(--ink2); font-size: .95rem; }
+  .pro { color: var(--gold); font-size: .72rem; font-weight: 700; letter-spacing: .08em; margin-left: .35rem; }
+  .note { color: var(--ink3); font-size: .92rem; max-width: 34rem; margin: 0 auto; }
+  footer { margin-top: 3rem; color: var(--ink2); font-size: .92rem; }
+  a { color: var(--teal); }
 </style>
 </head>
 <body>
 <div class="wrap">
   <header>
-    <div class="fish">🎣</div>
-    <h1>Reelcast</h1>
-    <p class="tag">The worldwide solunar fishing forecast &amp; trip planner.</p>
-    <div class="verdict">EXCELLENT</div>
-    <p class="lead">Know when to fish — and whether today is worth it — anywhere on
-    Earth. Reelcast reads the solunar feeding windows and the live pressure trend
-    into one honest daily rating, so you fish the right window.</p>
+    <img class="icon" src="./img/icon.png" alt="Reelcast app icon: a bass leaping across a rising moon" width="112" height="112">
+    <h1>Know when fish <em>bite</em></h1>
+    <p class="tag">Reelcast turns solunar feeding windows, dawn and dusk, and the pressure trend
+    into one honest 0–100 bite rating for your spot, anywhere in the world.</p>
+    <a class="cta" href="https://apps.apple.com/app/id6779351034">Download on the App Store</a>
   </header>
 
-  <div class="features">
-    <div class="feature"><b>Bite rating &amp; windows</b><span>Major &amp; minor feeding times over dawn and dusk, in one 0–100 rating.</span></div>
-    <div class="feature"><b>Pressure-trend intelligence</b><span>Falling pressure before a front is prime — read in plain language.</span></div>
-    <div class="feature"><b>7-day forecast</b><span>Ratings, windows and weather for the week, worldwide.</span></div>
-    <div class="feature"><b>Bite-window alerts &amp; catch log</b><span>A nudge before each window, and a log that captures the conditions.</span></div>
+  <div class="shots" aria-label="Screenshots">
+    <img src="./img/01-today.jpg" alt="Today: a 94 Excellent bite rating, the next window and the hourly bite curve" loading="lazy">
+    <img src="./img/03-forecast.jpg" alt="7-day forecast with a rating for each day" loading="lazy">
+    <img src="./img/04-calendar.jpg" alt="Fishing calendar with the best days marked" loading="lazy">
+    <img src="./img/05-tides.jpg" alt="Tides and water temperature for a coastal spot" loading="lazy">
+    <img src="./img/07-catchlog.jpg" alt="Catch log with photos and the conditions saved for each catch" loading="lazy">
+    <img src="./img/08-insights.jpg" alt="Catch insights: the conditions behind your best catches" loading="lazy">
   </div>
 
-  <p class="note">Solunar timing is a planning aid, not a guarantee. Reelcast leads
-  with the windows and the pressure trend, and never promises a catch.</p>
+  <div class="features">
+    <div class="feature"><b>Bite rating &amp; feeding windows</b><span>Major and minor windows to the minute, over dawn and dusk.</span></div>
+    <div class="feature"><b>Hourly bite curve</b><span>See when activity peaks today and the best stretch still ahead.</span></div>
+    <div class="feature"><b>Pressure trend</b><span>Falling before a front? Read in plain language, not just a number.</span></div>
+    <div class="feature"><b>Tides &amp; water temperature</b><span>Highs, lows and sea temperature for coastal spots. Future days with Pro.</span></div>
+    <div class="feature"><b>7-day forecast <span class="pro">PRO</span></b><span>Ratings, windows and weather for the week ahead.</span></div>
+    <div class="feature"><b>Fishing calendar <span class="pro">PRO</span></b><span>The best days for the next two months.</span></div>
+    <div class="feature"><b>Catch log &amp; insights <span class="pro">PRO</span></b><span>Conditions saved with every catch, and the patterns behind your best days.</span></div>
+    <div class="feature"><b>Bite-window alerts <span class="pro">PRO</span></b><span>A nudge before each window opens, scheduled on your phone.</span></div>
+    <div class="feature"><b>Widgets &amp; Siri</b><span>Your rating and next window on the Home and Lock Screen.</span></div>
+  </div>
+
+  <p class="note">Solunar timing is a planning aid, not a guarantee, and Reelcast never promises a catch.
+  No account. Your spots and catch log stay on your phone, and nothing is tracked.
+  In 14 languages.</p>
 
   <footer>
     <p><a href="./privacy.html">Privacy Policy</a> ·
